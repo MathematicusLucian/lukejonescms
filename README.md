@@ -25,6 +25,9 @@ docker exec -it lukejonescms_postgres psql -U postgres
 postgres-# postgres-# CREATE DATABASE lukejonescms;
 ```
 
+Reset database password:
+`ALTER USER postgres WITH PASSWORD 'new_password';`
+
 To quit:
 
 ```sh
