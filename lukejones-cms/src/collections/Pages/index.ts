@@ -1,5 +1,4 @@
 import type { CollectionConfig } from 'payload'
-
 import { authenticated } from '../../access/authenticated'
 import { authenticatedOrPublished } from '../../access/authenticatedOrPublished'
 import { Archive } from '../../blocks/ArchiveBlock/config'
@@ -12,7 +11,6 @@ import { slugField } from '@/fields/slug'
 import { populatePublishedAt } from '../../hooks/populatePublishedAt'
 import { generatePreviewPath } from '../../utilities/generatePreviewPath'
 import { revalidatePage } from './hooks/revalidatePage'
-
 import {
   MetaDescriptionField,
   MetaImageField,
