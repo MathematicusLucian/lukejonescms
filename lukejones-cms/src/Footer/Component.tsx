@@ -13,18 +13,18 @@ export async function Footer() {
   const navItems = footer?.navItems || []
 
   return (
-    <footer className="border-t border-border bg-black dark:bg-card text-white">
-      <div className="container py-8 gap-8 flex flex-col md:flex-row md:justify-between">
-        <Link className="flex items-center" href="/">
-          <Logo />
-        </Link>
+    <footer className="py-1 px-4 sm:px-6 lg:px-8 border-t border-slate-800 bg-slate-950 text-white">
+      <div className="container py-2 gap-2 flex flex-col md:flex-row md:justify-between">
+        <nav className="flex flex-col md:flex-row gap-4">
+          {navItems.map(({ link }, i) => {
+            return <CMSLink className="text-white" key={i} {...link} />
+          })}
+        </nav>
 
-        <div className="flex flex-col-reverse items-start md:flex-row gap-4 md:items-center">
-          <nav className="flex flex-col md:flex-row gap-4">
-            {navItems.map(({ link }, i) => {
-              return <CMSLink className="text-white" key={i} {...link} />
-            })}
-          </nav>
+        <div className="flex flex-col-reverse items-start md:flex-row gap-2 md:items-center">
+          <Link className="flex items-center" href="/">
+            &copy; Luke Jones, {(new Date().getFullYear())}. All Rights Reserved.
+          </Link>
         </div>
       </div>
     </footer>
