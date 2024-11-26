@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 import { cn } from 'src/utilities/cn'
 import { GeistMono } from 'geist/font/mono'
 import { GeistSans } from 'geist/font/sans'
+import { Open_Sans } from 'next/font/google'
+
 import React from 'react'
 
 import { AdminBar } from '@/components/AdminBar'
@@ -19,8 +21,13 @@ import { getServerSideURL } from '@/utilities/getURL'
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const { isEnabled } = await draftMode()
+  // const openSans = Open_Sans({
+  //   subsets: ['latin'],
+  //   display: 'swap',
+  // })
 
   return (
+    // <html className={Open_Sans.name} lang="en" suppressHydrationWarning>
     <html className={cn(GeistSans.variable, GeistMono.variable)} lang="en" suppressHydrationWarning>
       <head>
         <InitTheme />
