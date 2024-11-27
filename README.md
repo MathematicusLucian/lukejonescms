@@ -27,7 +27,7 @@ docker run --name lukejonescms_postgres -e POSTGRES_PASSWORD="PASSWORD" -d  -p 5
 ```sh
 # docker exec -it lukejonescms_postgres bash
 docker exec -it lukejonescms_postgres psql -U postgres
-postgres-# postgres-# CREATE DATABASE lukejonescms;
+postgres-# postgres-# CREATE DATABASE lukejonescms
 ```
 
 Reset database password:
