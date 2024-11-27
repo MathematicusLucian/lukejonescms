@@ -47,11 +47,11 @@ export default async function Page() {
 
       <CollectionArchive posts={projects.docs} relationTo="projects" />
 
-      {/* <div className="container">
-        {projects.totalPages > 1 && projects.page && (
+      <div className="container">
+        {/* {projects.totalPages > 1 && projects.page && (
           <Pagination post={projects.project} totalPages={projects.totalPosts} />
-        )}
-      </div> */}
+        )} */}
+      </div>
     </div>
   )
 }

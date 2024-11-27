@@ -7,10 +7,13 @@ import { Card, CardPostData } from '@/components/Card'
 
 export type Props = {
   posts: CardPostData[]
+  relationTo: string
 }
 
-export const CollectionArchive: React.FC<Props> = (props) => {
-  const { posts } = props
+export const CollectionArchive: React.FC<Props> = (props: Props) => {
+  // const { posts } = props.posts
+  const posts = props.posts
+  const relationTo: string = props.relationTo ?? "posts"
 
   return (
     <div className={cn('container')}>
