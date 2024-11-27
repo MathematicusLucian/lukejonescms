@@ -8,6 +8,8 @@ import { CMSLink } from '@/components/Link'
 import Link from 'next/link'
 import { SearchIcon } from 'lucide-react'
 
+import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
+
 export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
   const navItems = header?.navItems || []
 
@@ -20,6 +22,7 @@ export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
         <span className="sr-only">Search</span>
         <SearchIcon className="w-5 text-primary" />
       </Link>
+      <ThemeSelector />
     </nav>
   )
 }
