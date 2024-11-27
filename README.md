@@ -39,6 +39,10 @@ To quit:
 \q
 ```
 
+\d+ projects_rels
+
+ALTER TABLE projects_rels RENAME CONSTRAINT projects_id_post_id to projects_id_project_id
+
 Server path:
 `postgresql://lukejonescms_postgres:PASSWORD@localhost:5432/postgres`
 
