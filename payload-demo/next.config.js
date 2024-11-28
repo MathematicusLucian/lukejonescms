@@ -1,16 +1,15 @@
 import { withPayload } from '@payloadcms/next/withPayload'
-
 import redirects from './redirects.js'
 
 const NEXT_PUBLIC_SERVER_URL = process.env.VERCEL_PROJECT_PRODUCTION_URL
   ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-  : undefined || process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'
+  :  undefined || process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
     remotePatterns: [
-      ...[NEXT_PUBLIC_SERVER_URL /* 'https://example.com' */].map((item) => {
+      ...[NEXT_PUBLIC_SERVER_URL].map((item) => { /* 'https://example.com' */
         const url = new URL(item)
 
         return {
@@ -25,6 +24,14 @@ const nextConfig = {
   experimental: {
     reactCompiler: false
   },
+  // async rewrites() {
+  //     return [
+  //       {
+  //         source: '/api/:path*',
+  //         destination: 'https://api.example.com/:path*',
+  //       },
+  //     ]
+  //   },
 }
 
 export default withPayload(nextConfig)
