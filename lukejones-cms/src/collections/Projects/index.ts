@@ -28,7 +28,7 @@ import {
 import { slugField } from '@/fields/slug'
 import { getServerSideURL } from '@/utilities/getURL'
 
-export const Projects: CollectionConfig<'posts'> = {
+export const Projects: CollectionConfig<'projects'> = {
   slug: 'projects',
   access: {
     create: authenticated,
@@ -63,7 +63,7 @@ export const Projects: CollectionConfig<'posts'> = {
     preview: (data) => {
       const path = generatePreviewPath({
         slug: typeof data?.slug === 'string' ? data.slug : '',
-        collection: 'posts',
+        collection: 'projects',
       })
 
       return `${getServerSideURL()}${path}`
@@ -118,7 +118,7 @@ export const Projects: CollectionConfig<'posts'> = {
                 }
               },
               hasMany: true,
-              relationTo: 'posts',
+              relationTo: 'projects',
             },
             {
               name: 'categories',

@@ -10,7 +10,6 @@ import { GenerateTitle, GenerateURL } from '@payloadcms/plugin-seo/types'
 import { FixedToolbarFeature, HeadingFeature, lexicalEditor } from '@payloadcms/richtext-lexical'
 import { searchFields } from '@/search/fieldOverrides'
 import { beforeSyncWithSearch } from '@/search/beforeSync'
-
 import { Page, Post } from '@/payload-types'
 import { getServerSideURL } from '@/utilities/getURL'
 
@@ -20,13 +19,12 @@ const generateTitle: GenerateTitle<Post | Page> = ({ doc }) => {
 
 const generateURL: GenerateURL<Post | Page> = ({ doc }) => {
   const url = getServerSideURL()
-
   return doc?.slug ? `${url}/${doc.slug}` : url
 }
 
 export const plugins: Plugin[] = [
   redirectsPlugin({
-    collections: ['pages', 'posts'],
+    collections: ['pages', 'posts', 'projects'],
     overrides: {
       // @ts-expect-error
       fields: ({ defaultFields }) => {
@@ -81,7 +79,7 @@ export const plugins: Plugin[] = [
     },
   }),
   searchPlugin({
-    collections: ['posts'],
+    collections: ['posts', 'pages', 'projects'],
     beforeSync: beforeSyncWithSearch,
     searchOverrides: {
       fields: ({ defaultFields }) => {

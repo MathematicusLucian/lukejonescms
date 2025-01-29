@@ -20,10 +20,8 @@ export const Card: React.FC<{
 }> = (props) => {
   const { card, link } = useClickableCard({})
   const { className, doc, relationTo, showCategories, title: titleFromProps } = props
-
   const { slug, categories, meta, title } = doc || {}
   const { description, image: metaImage } = meta || {}
-
   const hasCategories = categories && Array.isArray(categories) && categories.length > 0
   const titleToUse = titleFromProps || title
   const sanitizedDescription = description?.replace(/\s/g, ' ') // replace non-breaking space with white space
@@ -49,11 +47,8 @@ export const Card: React.FC<{
                 {categories?.map((category, index) => {
                   if (typeof category === 'object') {
                     const { title: titleFromCategory } = category
-
                     const categoryTitle = titleFromCategory || 'Untitled category'
-
                     const isLast = index === categories.length - 1
-
                     return (
                       <Fragment key={index}>
                         {categoryTitle}
@@ -61,7 +56,6 @@ export const Card: React.FC<{
                       </Fragment>
                     )
                   }
-
                   return null
                 })}
               </div>
