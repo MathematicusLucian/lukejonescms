@@ -4,7 +4,7 @@ export default {
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    './src/**/*.{html,ts,tsx}',
   ],
   darkMode: ['selector', '[data-theme="dark"]'],
   plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
@@ -89,10 +89,15 @@ export default {
         success: 'hsl(var(--success))',
         error: 'hsl(var(--error))',
         warning: 'hsl(var(--warning))',
+        spacing: {
+          '128': '32rem',
+          '144': '36rem',
+        },
       },
       fontFamily: {
         mono: ['var(--font-geist-mono)'],
-        sans: ['var(--font-geist-sans)'],
+        sans: ['Graphik', 'sans-serif', 'var(--font-geist-sans)'],
+        serif: ['Merriweather', 'serif'],
       },
       keyframes: {
         'accordion-down': {
@@ -119,4 +124,7 @@ export default {
       }),
     },
   },
+  corePlugins: {
+    aspectRatio: false,
+  }
 }

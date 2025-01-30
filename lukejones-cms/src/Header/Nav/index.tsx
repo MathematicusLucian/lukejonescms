@@ -1,22 +1,18 @@
 'use client'
-
 import React from 'react'
-
 import type { Header as HeaderType } from '@/payload-types'
-
 import { CMSLink } from '@/components/Link'
 import Link from 'next/link'
 import { SearchIcon } from 'lucide-react'
-
 import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
 
 export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
   const navItems = header?.navItems || []
 
   return (
-    <nav className="flex gap-3 items-center">
+    <nav className="flex gap-3 items-center bg-slate-950 text-slate-100">
       {navItems.map(({ link }, i) => {
-        return <CMSLink key={i} {...link} appearance="link" />
+        return <CMSLink key={i} {...link} appearance="link" className="text-sm px-4 py-2 leading-none rounded-full font-semibold bg-slate-950 text-slate-100 hover:bg-amber-500 hover:text-slate-950" />
       })}
       <Link href="/search">
         <span className="sr-only">Search</span>

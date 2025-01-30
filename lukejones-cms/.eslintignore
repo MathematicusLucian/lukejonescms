@@ -10,3 +10,4 @@
 **/temp
 playwright.config.ts
 jest.config.js
+**/globals.sass
