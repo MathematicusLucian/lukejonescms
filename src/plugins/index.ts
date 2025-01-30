@@ -12,6 +12,7 @@ import { searchFields } from '@/search/fieldOverrides'
 import { beforeSyncWithSearch } from '@/search/beforeSync'
 import { Page, Post } from '@/payload-types'
 import { getServerSideURL } from '@/utilities/getURL'
+import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 
 const generateTitle: GenerateTitle<Post | Page> = ({ doc }) => {
   return doc?.title ? `${doc.title} | MathematicusLucian.comTemplate` : 'MathematicusLucian.comTemplate'
@@ -88,4 +89,16 @@ export const plugins: Plugin[] = [
     },
   }),
   payloadCloudPlugin(),
+  vercelBlobStorage({
+    enabled: true, // Optional, defaults to true
+    // Specify which collections should use Vercel Blob
+    collections: {
+      media: true,
+      'media-with-prefix': {
+        prefix: 'blob',
+      },
+    },
+    // Token provided by Vercel once Blob storage is added to your Vercel project
+    token: process.env.BLOB_READ_WRITE_TOKEN,
+  }),
 ]
