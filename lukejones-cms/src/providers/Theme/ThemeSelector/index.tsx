@@ -8,9 +8,7 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import React, { useState } from 'react'
-
 import type { Theme } from './types'
-
 import { useTheme } from '..'
 import { themeLocalStorageKey } from './types'
 
@@ -43,17 +41,23 @@ export const ThemeSelector: React.FC = () => {
       </SelectTrigger>
       <SelectContent className='bg-slate-100 dark:bg-slate-950 text-slate-950 dark:text-slate-100'>
         <SelectItem value="auto">Auto</SelectItem>
-        <SelectItem value="light">Light</SelectItem>
-        <SelectItem value="dark">
-          Dark
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+        <SelectItem value="light">
+          <div className='flex items-center justify-between'>
+            Light
+            <Sun
+              className="ml-2 h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
+            />
+          </div>
+        </SelectItem>
+        <SelectItem value="black dark:white">
+          <div className='flex items-center justify-between'>
+            Dark
+            <Moon
+              className="ml-2 h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
+            />
+          </div>
         </SelectItem>
       </SelectContent>
     </Select>
   )
 }
-{/* <Sun 
-color="red" // white 
-className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" // h-[1.2rem] w-[1.2rem]" //
-/> */}
-{/* <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" /> */ }
