@@ -22,7 +22,7 @@ export const HighImpactHero: React.FC<Page['hero']> = ({ links, media, richText 
     >
       <div className="container mb-0 z-10 relative flex items-center justify-center">
         <div className="max-w-[36.5rem] text-center">
-          {richText && <RichText className="mb-10" content={richText} enableGutter={false} />}
+          {richText && <RichText className="mb-10 no-prose text-slate-100 dark:text-slate-950" content={richText} enableGutter={false} />}
           {Array.isArray(links) && links.length > 0 && (
             <ul className="flex justify-center gap-4">
               {links.map(({ link }, i) => {

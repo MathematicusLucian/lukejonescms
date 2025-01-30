@@ -10,9 +10,9 @@ export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
   const navItems = header?.navItems || []
 
   return (
-    <nav className="flex gap-3 items-center bg-slate-950 text-slate-100">
+    <nav className="flex gap-3 items-center rounded bg-slate-100 dark:bg-slate-950 text-slate-950 text-slate-100">
       {navItems.map(({ link }, i) => {
-        return <CMSLink key={i} {...link} appearance="link" className="text-sm px-4 py-2 leading-none rounded-full font-semibold bg-slate-950 text-slate-100 hover:bg-amber-500 hover:text-slate-950" />
+        return <CMSLink key={i} {...link} appearance="link" className="px-4 py-2 leading-none rounded-full font-semibold bg-slate-100 dark:bg-slate-950 text-slate-950 text-slate-100 hover:bg-rose-700 hover:text-slate-950 text-sm" />
       })}
       <Link href="/search">
         <span className="sr-only">Search</span>

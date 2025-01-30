@@ -38,7 +38,7 @@ export const home: RequiredDataFromCollectionSlug<'pages'> = {
                 format: 0,
                 mode: 'normal',
                 style: '',
-                text: 'Payload Website Template',
+                text: 'MathematicusLucian.comTemplate',
                 version: 1,
               },
             ],
@@ -666,10 +666,10 @@ export const home: RequiredDataFromCollectionSlug<'pages'> = {
     },
   ],
   meta: {
-    description: 'An open-source website built with Payload and Next.js.',
+    description: 'MathematicusLucian.com.',
     // @ts-ignore
     image: '{{IMAGE_1}}',
-    title: 'Payload Website Template',
+    title: 'MathematicusLucian.comTemplate',
   },
   title: 'Home',
 }

@@ -30,7 +30,7 @@ export const Card: React.FC<{
       {/* lg:h-screen */}
       <article
         className={cn(
-          'overflow-hidden bg-card mx-6 lg:mx-0 mb-200 rounded-lg border border-border border-b border-pink-950 bg-slate-950 hover:cursor-pointer shadow',
+          'overflow-hidden bg-card rounded mx-6 lg:mx-0 mb-200 rounded-lg border border-border border-b border-pink-950 bg-slate-100 dark:bg-slate-950 text:slate-950 bg:text-slate-100 hover:cursor-pointer shadow',
           className,
         )}
         ref={card.ref}
