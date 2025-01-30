@@ -22,7 +22,7 @@ export async function Footer() {
           })}
         </nav>
 
-        <div className="flex flex-col-reverse items-start md:flex-row gap-2 md:items-center relative mx-auto text-center text-sm text-slate-950 dark:slate-100">
+        <div className="flex flex-col-reverse items-start md:flex-row gap-2 md:items-center relative mx-auto text-center text-sm text-slate-950 dark:text-slate-100">
           <Link className="flex items-center" href="/">
             &copy; Luke Jones, {(new Date().getFullYear())}. All Rights Reserved.
           </Link>
