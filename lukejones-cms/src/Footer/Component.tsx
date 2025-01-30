@@ -13,8 +13,8 @@ export async function Footer() {
   const navItems = footer?.navItems || []
 
   return (
-    <footer className="py-1 px-4 sm:px-6 lg:px-8 border-t border-slate-800 bg-slate-100 dark:bg-slate-950 text-slate-950 bg-text-slate-100 text-white">
-      <div className="container py-2 gap-2 flex flex-col md:flex-row md:justify-between relative block bg-slate-100 dark:bg-slate-950 text:slate-950 bg:text-slate-100 py-3 px-4 border-t border-slate-700 space-x-6 text-center">
+    <footer className="py-1 px-4 sm:px-6 lg:px-8 border-t border-slate-800 bg-slate-100 dark:bg-slate-950 text-slate-950 bg-text-slate-100">
+      <div className="container py-2 gap-2 flex flex-col md:flex-row md:justify-between relative block bg-slate-100 dark:bg-slate-950 text-slate-950 dark:text-slate-100 py-3 px-4 border-t border-slate-700 space-x-6 text-center">
 
         <nav className="flex flex-col md:flex-row gap-4">
           {navItems.map(({ link }, i) => {
@@ -22,7 +22,7 @@ export async function Footer() {
           })}
         </nav>
 
-        <div className="flex flex-col-reverse items-start md:flex-row gap-2 md:items-center relative mx-auto text-center text-rose-700">
+        <div className="flex flex-col-reverse items-start md:flex-row gap-2 md:items-center relative mx-auto text-center text-sm text-amber-700">
           <Link className="flex items-center" href="/">
             &copy; Luke Jones, {(new Date().getFullYear())}. All Rights Reserved.
           </Link>
