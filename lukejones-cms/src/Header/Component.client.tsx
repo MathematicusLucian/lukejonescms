@@ -30,7 +30,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ header }) => {
   }, [headerTheme])
 
   return (
-    <header className="w-full relative z-10 py-4 px-4 sm:px-6 lg:px-8 border-b border-slate-800 bg-slate-950 bg-amber-400 py-3 px-4 flex items-center justify-between border-b border-slate-700 space-x-6" {...(theme ? { 'data-theme': theme } : {})}>
+    <header className="min-w-full relative flex items-center justify-between z-10 border-b border-slate-800 bg-gradient-to-r from-rose-700 via-fuchsia-950 to-indigo-950 py-3 px-4 sm:px-6 lg:px-8 border-b border-slate-700 space-x-6" {...(theme ? { 'data-theme': theme } : {})}>
       {/* sticky  */}
       <div className="py-0 border-b border-border flex justify-between top-0 z-50 bg-slate-900 text-slate-100 py-3 px-4 flex items-center justify-between border-b border-slate-700 space-x-6">
         <Link href="/" className="font-bold text-xl hover:bg-amber-500 hover:text-slate-950 tracking-narrow">

@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
+
 export default {
   content: [
     './pages/**/*.{ts,tsx}',
@@ -53,7 +55,6 @@ export default {
         sm: 'calc(var(--radius) - 4px)',
       },
       colors: {
-        ...colors,
         accent: {
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))',
@@ -94,6 +95,12 @@ export default {
           '128': '32rem',
           '144': '36rem',
         },
+        stone: colors.warmGray,
+        sky: colors.lightBlue,
+        neutral: colors.trueGray,
+        gray: colors.coolGray,
+        slate: colors.blueGray,
+        ...colors,
       },
       fontFamily: {
         mono: ['var(--font-geist-mono)'],

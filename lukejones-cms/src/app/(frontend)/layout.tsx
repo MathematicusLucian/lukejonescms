@@ -34,7 +34,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet" />
       </head>
-      <body className='main mx-auto min-w-full bg-gradient-to-r from-rose-700 via-fuchsia-950 to-indigo-950 mix-blend-screen'>
+      <body className='main mx-auto min-w-full bg-gradient-to-r from-rose-700 via-fuchsia-950 to-indigo-950'>
+        {/* mix-blend-screen */}
         <Providers>
           <AdminBar
             adminBarProps={{
