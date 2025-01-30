@@ -18,11 +18,11 @@ export async function Footer() {
 
         <nav className="flex flex-col md:flex-row gap-4">
           {navItems.map(({ link }, i) => {
-            return <CMSLink className="text-white" key={i} {...link} />
+            return <CMSLink className="text-slate-950 dark:text-slate-100" key={i} {...link} />
           })}
         </nav>
 
-        <div className="flex flex-col-reverse items-start md:flex-row gap-2 md:items-center relative mx-auto text-center text-sm text-amber-700">
+        <div className="flex flex-col-reverse items-start md:flex-row gap-2 md:items-center relative mx-auto text-center text-sm text-rose-700">
           <Link className="flex items-center" href="/">
             &copy; Luke Jones, {(new Date().getFullYear())}. All Rights Reserved.
           </Link>
